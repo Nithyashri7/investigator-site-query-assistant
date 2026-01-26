@@ -1,0 +1,28 @@
+# ---------------- Python ----------------
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ---------------- Virtual Environments ----------------
+venv/
+.venv/
+
+# ---------------- OS / IDE ----------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---------------- Frontend ----------------
+frontend/node_modules/
+frontend/dist/
+
+# ---------------- Local secrets (DO NOT COMMIT) ----------------
+.env
+app/local_settings.json
+
+# ---------------- Vector DB / Runtime Artifacts ----------------
+chroma_db/
+
+# ---------------- Logs / Temp ----------------
+*.log

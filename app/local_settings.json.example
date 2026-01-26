@@ -1,0 +1,5 @@
+{
+  "OPENROUTER_API_KEY": "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",
+  "OPENROUTER_MODEL": "meta-llama/llama-3.1-8b-instruct:free"
+}
+

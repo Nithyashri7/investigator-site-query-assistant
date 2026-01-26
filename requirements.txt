@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pypdf
+python-docx
+faiss-cpu
+numpy
+requests
+python-multipart
+python-dotenv
+langchain
+langchain-community
+chromadb
+sentence-transformers
+torch
+
