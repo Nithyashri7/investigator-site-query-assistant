@@ -1,7 +1,10 @@
 # ---------------- Python ----------------
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .pytest_cache/
+.mypy_cache/
 
 # ---------------- Virtual Environments ----------------
 venv/
@@ -17,12 +20,21 @@ Thumbs.db
 frontend/node_modules/
 frontend/dist/
 
-# ---------------- Local secrets (DO NOT COMMIT) ----------------
+# ---------------- Local secrets / configs (DO NOT COMMIT) ----------------
 .env
+.env.*
 app/local_settings.json
+.mcp.json
 
 # ---------------- Vector DB / Runtime Artifacts ----------------
 chroma_db/
+*.sqlite
+*.db
 
 # ---------------- Logs / Temp ----------------
 *.log
+*.tmp
+
+# ---------------- Build / Cache ----------------
+.cache/
+coverage/

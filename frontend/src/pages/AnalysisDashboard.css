@@ -1,0 +1,153 @@
+/* src/pages/AnalysisDashboard.css */
+
+.dashboard-container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* KPI Cards */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .kpi-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.kpi-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.kpi-card:hover {
+    transform: scale(1.02);
+}
+
+.kpi-title {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 8px 0;
+}
+
+.kpi-value {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #111827;
+}
+
+.kpi-green {
+    border-left: 4px solid #22c55e;
+}
+
+.kpi-red {
+    border-left: 4px solid #ef4444;
+}
+
+/* Sections */
+.dashboard-section {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #111827;
+}
+
+/* SOP Score */
+.score-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.score-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 12px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.5s ease-in-out;
+}
+
+.bg-green {
+    background-color: #22c55e;
+}
+
+.bg-yellow {
+    background-color: #eab308;
+}
+
+.bg-red {
+    background-color: #ef4444;
+}
+
+/* User Satisfaction */
+.satisfaction-text {
+    font-size: 24px;
+    margin-top: 8px;
+    color: #111827;
+}
+
+/* Charts Grid */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.chart-container {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button */
+.download-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+.download-btn:hover {
+    background-color: #1d4ed8;
+}

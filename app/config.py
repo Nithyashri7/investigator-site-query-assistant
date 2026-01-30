@@ -19,3 +19,21 @@ LLM_MODEL = "mistral"   # fast, stable, very reliable for RAG
 
 # ✅ INCREASE TIMEOUT (this fixes your fallback issue)
 OLLAMA_TIMEOUT = 120    # seconds (2 minutes)
+
+# ---------------- Numeric Configuration ----------------
+# Chunking
+MIN_CHUNK_SIZE = 300
+MAX_CHUNK_SIZE = 2500
+CHUNK_STEP = 1800
+
+# Retrieval
+RETRIEVAL_K = 5
+
+# LLM Context
+LLM_CONTEXT_CHUNKS = 3
+LLM_CHUNK_TRUNCATION = 300
+LLM_TEMPERATURE = 0.1
+LLM_NUM_PREDICT = 80
+
+# App Logic
+DEFAULT_CONFIDENCE = 0.9

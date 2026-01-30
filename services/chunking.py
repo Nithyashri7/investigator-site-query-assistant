@@ -1,4 +1,5 @@
 import re
+from app.config import MIN_CHUNK_SIZE, MAX_CHUNK_SIZE, CHUNK_STEP
 
 def semantic_chunk_sop(text: str) -> list[str]:
     """
@@ -17,14 +18,14 @@ def semantic_chunk_sop(text: str) -> list[str]:
     for sec in sections:
         sec = sec.strip()
         # Minimum 300 chars to ensure meaningful content
-        if len(sec) < 300:
+        if len(sec) < MIN_CHUNK_SIZE:
             continue
 
         # If section is too large (>2500 chars), split with overlap
-        if len(sec) > 2500:
-            for i in range(0, len(sec), 1800):
-                chunk = sec[i:i+2500]
-                if len(chunk) >= 300:  # Only add if meaningful
+        if len(sec) > MAX_CHUNK_SIZE:
+            for i in range(0, len(sec), CHUNK_STEP):
+                chunk = sec[i:i+MAX_CHUNK_SIZE]
+                if len(chunk) >= MIN_CHUNK_SIZE:  # Only add if meaningful
                     chunks.append(chunk)
         else:
             chunks.append(sec)

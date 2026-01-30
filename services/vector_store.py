@@ -1,3 +1,8 @@
+import warnings
+# Suppress LangChain deprecation warnings intentionally
+warnings.filterwarnings("ignore", category=UserWarning, module="langchain")
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import os
