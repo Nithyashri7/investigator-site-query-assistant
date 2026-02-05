@@ -1,5 +1,5 @@
 from typing import Dict
-import requests
+import requests # type: ignore
 import logging
 from services.vector_store import get_vectorstore
 from app.config import (
@@ -66,7 +66,7 @@ def generate_grounded_answer(query: str, chunks: list) -> str:
 
 Question: {query}
 
-Answer (2 sentences max):"""
+Answer (3 sentences max):"""
 
     try:
         logger.info(f"📤 Sending request to Ollama ({OLLAMA_BASE_URL})...")

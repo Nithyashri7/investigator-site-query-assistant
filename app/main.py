@@ -1,11 +1,11 @@
-from fastapi import FastAPI, UploadFile, File, Query, Depends
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, UploadFile, File, Query, Depends # type: ignore
+from fastapi.middleware.cors import CORSMiddleware # type: ignore
 from typing import List
 import os
 import shutil
 import json
 
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session # type: ignore
 
 from app.schemas import QuestionRequest, ChatInteractionCreate
 from app.database import get_db
@@ -23,7 +23,7 @@ SOP_DIR = os.path.join(BASE_DIR, "sop_files")
 os.makedirs(SOP_DIR, exist_ok=True)
 
 app = FastAPI(
-    title="Investigator Site Query Assistant",
+    title="Clinical SOP Assistant",
     version="2.0"
 )
 

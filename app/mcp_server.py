@@ -12,7 +12,7 @@ _original_stdout = sys.stdout
 sys.stdout = sys.stderr
 
 try:
-    from mcp.server.fastmcp import FastMCP
+    from mcp.server.fastmcp import FastMCP # type: ignore
     from services.rag_service import retrieve_chunks, generate_grounded_answer
 finally:
     # Restore stdout for MCP communication

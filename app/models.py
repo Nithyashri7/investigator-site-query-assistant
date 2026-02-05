@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, Text, Boolean, DateTime
-from sqlalchemy.sql import func
+from sqlalchemy import Column, Integer, Text, Boolean, DateTime # type: ignore
+from sqlalchemy.sql import func # type: ignore
 from app.database import Base
 
 class ChatInteraction(Base):
